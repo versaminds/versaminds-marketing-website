@@ -1,0 +1,35 @@
+import { PortfolioLayout } from '@/components/PortfolioLayout'
+import Image from 'next/image'
+import logo from './prettypearls.png'
+import webshop from './webshop.png'
+
+export const meta = {
+  client: 'Pretty Pearls',
+  title: 'Pretty Pearls webshop',
+  logo: logo,
+  description:
+    'Handgemaakte juwelen voor iedereen. Betaalbaar en kwalitatief.',
+  summary: [
+    'Pretty Pearls is een juwelenwebshop die zich richt op het aanbieden van betaalbare en kwalitatieve juwelen voor iedereen. De webshop is gebouwd met een focus op eenvoud en gebruiksvriendelijkheid, zodat klanten gemakkelijk hun favoriete juwelen kunnen vinden en bestellen.',
+  ],
+  date: '2019',
+  service: 'Web development, E-commerce, advies',
+  testimonial: {
+    author: { name: 'Laurien De Jonghe', role: 'Oprichter Pretty Pearls' },
+    client: { name: 'Pretty Pearls', author: 'Laurien De Jonghe'},
+    content:
+      'VersaMinds heeft me heel erg geholpen met het vormgeven van mijn webshop. Ze hebben me op een heel laagdrempelige manier uitgelegd hoe ik er zelf mee aan de slag kon, waardoor ik de klanten een optimale ervaring kan bieden.',
+  },
+  tags: [
+    'E-commerce',
+  ],
+  stats: [
+    { value: '>5K', label: 'Al meer dan 5000 bestellingen' },
+  ]
+}
+
+export default (props) => <PortfolioLayout meta={meta} {...props} />
+
+<Image src={webshop} alt="" />
+
+**Ontdek de webshop op [prettypearls.be](https://prettypearls.be)**

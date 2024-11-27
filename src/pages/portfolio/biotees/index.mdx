@@ -1,0 +1,35 @@
+import { PortfolioLayout } from '@/components/PortfolioLayout'
+import Image from 'next/image'
+import logo from './biotees.jpeg'
+import webshop from './webshop.png'
+
+export const meta = {
+  client: 'Biotees',
+  title: 'Biotees webshop',
+  logo: logo,
+  description:
+    'Golf tees gemaakt van 100% upcycled koffiedik',
+  summary: [
+    'Biotees is een online winkel gespecialiseerd in golf tees gemaakt van 100% upcycled koffiedik. De webshop is gebouwd met een focus op eenvoud en gebruiksvriendelijkheid, zodat klanten gemakkelijk hun favoriete producten kunnen vinden en bestellen.',
+  ],
+  date: '2024',
+  service: 'Web development, E-commerce, advies',
+  testimonial: {
+    author: { name: 'Lennert Mertens', role: 'Oprichter Biotees' },
+    client: { name: 'Biotees', author: 'Lennert Mertens'},
+    content:
+      'Samen met Frederic heb ik een webshop opgezet, op minder dan een week tijd. Wanneer snelheid en kwaliteit belangrijk zijn, dan kunnen we zeer snel schakelen.',
+  },
+  tags: [
+    'E-commerce',
+  ],
+  stats: [
+    { value: 'Sustainable', label: 'Webshop over sustainable producten' },
+  ]
+}
+
+export default (props) => <PortfolioLayout meta={meta} {...props} />
+
+<Image src={webshop} alt="" />
+
+**Ontdek de webshop op [biotees.golf](https://biotees.golf)**

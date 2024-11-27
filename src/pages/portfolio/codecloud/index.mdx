@@ -1,0 +1,42 @@
+import { PortfolioLayout } from '@/components/PortfolioLayout'
+import Image from 'next/image'
+import codecloud from './codecloud.png'
+import logo from './codecloud-logo.png'
+
+export const meta = {
+  client: 'CodeCloud',
+  title: 'Het alles-in-één platform voor IT professionals',
+  logo: logo,
+  description: 'Het alles-in-één platform voor IT professionals',
+  summary: [
+    'CodeCloud is een platform dat teams en individuen helpt om samen complexe IT-gerelateerde taken op te lossen. Bij CodeCloud willen we hét platform zijn waar IT-professionals kunnen samenwerken, kennis delen en samen groeien.',
+    'Alle vragen en antwoorden worden in de kennisbank opgeslagen, zodat oplossingen voor veelvoorkomende problemen gemakkelijk te vinden zijn. Doordat alle data gecentraliseerd is, wordt integratie met AI-tools zeer effectief.',
+  ],
+  date: '2023',
+  service: 'Web development, Product design, SaaS',
+  // testimonial: {
+  //   author: { name: 'Debra Fiscal', role: 'CEO of FamilyFund' },
+  //   client: { name: 'CodeCloud', author: 'Debra Fiscal'},
+  //   content:
+  //     'Working with Studio, we felt more like a partner than a customer. They really resonated with our mission to change the way people convince their parents to cash out their pensions.',
+  // },
+  tags: [
+    'Frontend',
+    'Backend',
+    'Project Management',
+    'Infrastructuur',
+    'Cloud',
+  ],
+  stats: [
+    { value: 'Pivot', label: 'CodeCloud wordt momenteel herzien' },
+    { value: '+100K', label: 'Lines of code' },
+  ],
+}
+
+export default (props) => <PortfolioLayout meta={meta} {...props} />
+
+<Image src={codecloud} alt="" />
+
+CodeCloud is een platform dat teams en individuen helpt om samen complexe IT-gerelateerde taken op te lossen. Bij CodeCloud willen we hét platform zijn waar IT-professionals kunnen samenwerken, kennis delen en samen groeien.
+
+Alle vragen en antwoorden worden in de kennisbank opgeslagen, zodat oplossingen voor veelvoorkomende problemen gemakkelijk te vinden zijn. Doordat alle data gecentraliseerd is, wordt integratie met AI-tools zeer effectief.
