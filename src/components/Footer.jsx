@@ -1,12 +1,14 @@
 import Link from 'next/link'
-import { Container } from './Container'
 import { FaInstagram, FaLinkedin } from 'react-icons/fa'
-import { useRef, useState } from 'react'
+import { Container } from './Container'
 
 const navigation = {
   services: [
     { name: 'Web development & E-commerce', href: '/services#web-development' },
-    { name: 'Advies, Consultancy & Project Management', href: '/services#consultancy' },
+    {
+      name: 'Advies, Consultancy & Project Management',
+      href: '/services#consultancy',
+    },
     { name: 'Automatisatie', href: '/services#automation' },
     { name: 'Training & Workshops', href: '/services#training' },
   ],
@@ -37,32 +39,32 @@ const navigation = {
 }
 
 export function Footer() {
-  const inputEl = useRef(null)
-  const [message, setMessage] = useState('')
+  // const inputEl = useRef(null)
+  // const [message, setMessage] = useState('')
 
-  const subscribe = async (e) => {
-    e.preventDefault()
-    const res = await fetch(`/api/subscribe`, {
-      body: JSON.stringify({
-        email: inputEl.current.value,
-        tags: ['newsletter']
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    })
+  // const subscribe = async (e) => {
+  //   e.preventDefault()
+  //   const res = await fetch(`/api/subscribe`, {
+  //     body: JSON.stringify({
+  //       email: inputEl.current.value,
+  //       tags: ['newsletter']
+  //     }),
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     method: 'POST',
+  //   })
 
-    const { error } = await res.json()
+  // const { error } = await res.json()
 
-    if (error) {
-      setMessage(error)
-      return
-    }
+  // if (error) {
+  //   setMessage(error)
+  //   return
+  // }
 
-    inputEl.current.value = ''
-    setMessage('You are now subscribed to the newsletter.')
-  }
+  // inputEl.current.value = ''
+  // setMessage('You are now subscribed to the newsletter.')
+  // }
   return (
     <footer className="bg-gray-900" aria-labelledby="footer-heading">
       <Container>

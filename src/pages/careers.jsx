@@ -1,36 +1,35 @@
-import Head from 'next/head'
-import { useRef, useState } from 'react'
+import { Container } from '@/components/Container'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import { Container } from '@/components/Container'
+import Head from 'next/head'
 import Link from 'next/link'
 
 export default function About() {
-  const inputEl = useRef(null)
-  const [message, setMessage] = useState('')
+  // const inputEl = useRef(null)
+  // const [message, setMessage] = useState('')
 
   const subscribe = async (e) => {
     e.preventDefault()
-    const res = await fetch(`/api/subscribe`, {
-      body: JSON.stringify({
-        email: inputEl.current.value,
-        tags: ['careers']
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    })
+  //   const res = await fetch(`/api/subscribe`, {
+  //     body: JSON.stringify({
+  //       email: inputEl.current.value,
+  //       tags: ['careers']
+  //     }),
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     method: 'POST',
+  //   })
 
-    const { error } = await res.json()
+  //   const { error } = await res.json()
 
-    if (error) {
-      setMessage(error)
-      return
-    }
+  //   if (error) {
+  //     setMessage(error)
+  //     return
+  //   }
 
-    inputEl.current.value = ''
-    setMessage('You are now subscribed to the newsletter.')
+  //   inputEl.current.value = ''
+  //   setMessage('You are now subscribed to the newsletter.')
   }
   return (
     <>
@@ -44,7 +43,9 @@ export default function About() {
           <h2 className="inline sm:block">
             Wil je op de hoogte blijven van nieuwe vacatures?
           </h2>{' '}
-          <p className="inline sm:block font-display font-normal">Abbonneer nu</p>
+          <p className="inline font-display font-normal sm:block">
+            Abbonneer nu
+          </p>
         </div>
         <form className="mt-10 max-w-md" onSubmit={subscribe}>
           <div className="flex gap-x-4">
@@ -53,7 +54,7 @@ export default function About() {
             </label>
             <input
               id="email-address"
-              ref={inputEl}
+              // ref={inputEl}
               name="email"
               type="email"
               autoComplete="email"
