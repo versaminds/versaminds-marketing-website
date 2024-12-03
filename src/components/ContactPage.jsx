@@ -1,90 +1,88 @@
 import {
   BuildingOffice2Icon,
-  EnvelopeIcon,
-  PhoneIcon,
+  EnvelopeIcon
 } from '@heroicons/react/24/outline'
 import { FaLinkedin } from 'react-icons/fa'
-import { useState } from 'react'
 
 export default function ContactPage() {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
+  // const [firstName, setFirstName] = useState('')
+  // const [lastName, setLastName] = useState('')
+  // const [email, setEmail] = useState('')
+  // const [subject, setSubject] = useState('')
+  // const [message, setMessage] = useState('')
 
   //   Form validation state
-  const [errors, setErrors] = useState({})
+  // const [errors, setErrors] = useState({})
 
   //   Setting button text on form submission
-  const handleValidation = () => {
-    let tempErrors = {}
-    let isValid = true
+  // const handleValidation = () => {
+  //   let tempErrors = {}
+  //   let isValid = true
 
-    if (firstName.length <= 0) {
-      tempErrors['firstName'] = true
-      isValid = false
-    }
-    if (lastName.length <= 0) {
-      tempErrors['lastName'] = true
-      isValid = false
-    }
-    if (email.length <= 0) {
-      tempErrors['email'] = true
-      isValid = false
-    }
-    if (subject.length <= 0) {
-      tempErrors['subject'] = true
-      isValid = false
-    }
-    if (message.length <= 0) {
-      tempErrors['message'] = true
-      isValid = false
-    }
+  //   if (firstName.length <= 0) {
+  //     tempErrors['firstName'] = true
+  //     isValid = false
+  //   }
+  //   if (lastName.length <= 0) {
+  //     tempErrors['lastName'] = true
+  //     isValid = false
+  //   }
+  //   if (email.length <= 0) {
+  //     tempErrors['email'] = true
+  //     isValid = false
+  //   }
+  //   if (subject.length <= 0) {
+  //     tempErrors['subject'] = true
+  //     isValid = false
+  //   }
+  //   if (message.length <= 0) {
+  //     tempErrors['message'] = true
+  //     isValid = false
+  //   }
 
-    setErrors({ ...tempErrors })
-    console.log('errors', errors)
-    return isValid
-  }
+  //   setErrors({ ...tempErrors })
+  //   console.log('errors', errors)
+  //   return isValid
+  // }
 
-  const resetFormFields = () => {
-    setFirstName('')
-    setLastName('')
-    setEmail('')
-    setMessage('')
-    setSubject('')
-  }
+  // const resetFormFields = () => {
+  //   setFirstName('')
+  //   setLastName('')
+  //   setEmail('')
+  //   setMessage('')
+  //   setSubject('')
+  // }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
 
-    let isValidForm = handleValidation()
+  //   let isValidForm = handleValidation()
 
-    if (isValidForm) {
-      const res = await fetch('/api/sendgrid', {
-        body: JSON.stringify({
-          email: email,
-          firstName: firstName,
-          lastName: lastName,
-          subject: subject,
-          message: message,
-        }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        method: 'POST',
-      })
+  //   if (isValidForm) {
+  //     const res = await fetch('/api/sendgrid', {
+  //       body: JSON.stringify({
+  //         email: email,
+  //         firstName: firstName,
+  //         lastName: lastName,
+  //         subject: subject,
+  //         message: message,
+  //       }),
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       method: 'POST',
+  //     })
 
-      const { error } = await res.json()
-      if (error) {
-        console.log(error)
-        resetFormFields()
-        return
-      }
-      resetFormFields()
-    }
-    console.log(firstName, lastName, email, subject, message)
-  }
+  //     const { error } = await res.json()
+  //     if (error) {
+  //       console.log(error)
+  //       resetFormFields()
+  //       return
+  //     }
+  //     resetFormFields()
+  //   }
+  //   console.log(firstName, lastName, email, subject, message)
+  // }
   return (
     <div className="relative isolate bg-white">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">

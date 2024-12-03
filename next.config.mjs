@@ -4,11 +4,14 @@ import rehypePrism from '@mapbox/rehype-prism'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'md'],
   reactStrictMode: true,
-  experimental: {
-    scrollRestoration: true,
-  },
+  // experimental: {
+  //   scrollRestoration: true,
+  // },
+  basePath: "/versaminds-marketing-website",
+  images: { unoptimized: true }
 }
 
 const withMDX = nextMDX({
