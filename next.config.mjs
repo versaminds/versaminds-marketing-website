@@ -4,6 +4,9 @@ import rehypePrism from '@mapbox/rehype-prism'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  // BasePath is for Github Pages
+  basePath: "/versaminds-marketing-website",
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'md'],
   reactStrictMode: true,
   experimental: {
