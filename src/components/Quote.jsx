@@ -1,5 +1,5 @@
 // import QuoteImage from '@/images/frederic-lennert.jpg'
-import QuoteImage from '@/images/lennert-kbc.jpg'
+import QuoteImage from '@/images/lennert.jpg'
 import Image from 'next/image'
 export default function Quote() {
   return (
@@ -37,7 +37,7 @@ export default function Quote() {
               </svg>
               <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
                 <p>
-                  Bedrijven hebben nood aan een betrouwbare partner die samen met hen op zoek gaat naar de oplossing die bij hen past. Wij helpen bedrijven met hun IT zorgen en zorgen voor een oplossing op maat.
+                  Bedrijven hebben nood aan een betrouwbare partner die samen met hen op zoek gaat naar de oplossing die bij hen past. Wij helpen bedrijven met hun IT-zorgen en zorgen voor een oplossing op maat.
                 </p>
               </blockquote>
               <figcaption className="mt-8 text-base">

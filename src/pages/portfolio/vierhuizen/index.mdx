@@ -1,0 +1,29 @@
+import { PortfolioLayout } from '@/components/PortfolioLayout'
+import Image from 'next/image'
+import vierhuizen from './vierhuizen.png'
+import logo from './vierhuizen-logo.png'
+
+export const meta = {
+  client: 'Vierhuizen',
+  title: 'Basisschool Vierhuizen & Meir website',
+  logo: logo,
+  description: 'Waar leren groeit en talent bloeit.',
+  summary: [
+    'Voor basisschool Vierhuizen & Meir hebben we een volledige website verzorgd, inclusief sociale media.',
+  ],
+  date: '2025',
+  service: 'Web development, Social media',
+  tags: [
+    'Web development',
+    'Socials',
+  ],
+  stats: [
+    { value: '2025', label: 'Website launch' },
+  ],
+}
+
+export default (props) => <PortfolioLayout meta={meta} {...props} />
+
+<Image src={vierhuizen} alt="" />
+
+Voor basisschool Vierhuizen & Meir hebben we een volledige website verzorgd, inclusief sociale media.

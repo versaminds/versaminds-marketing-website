@@ -1,0 +1,30 @@
+import { PortfolioLayout } from '@/components/PortfolioLayout'
+import Image from 'next/image'
+import lifeisbananas from './lifeisbananas.png'
+import logo from './lifeisbananas-logo.png'
+
+export const meta = {
+  client: 'Life Is Bananas',
+  title: 'Life Is Bananas webshop',
+  logo: logo,
+  description: 'Het alles-in-één platform voor IT professionals',
+  summary: [
+    'Life is Bananas is een webshop die zich richt op de verkoop van gevriesdroogde kindervoeding en snacks. 100% natuurlijk, voedzaam, smakelijk en bovenal easy-peasy.',
+  ],
+  date: '2025',
+  service: 'Web development, E-commerce, advies',
+  tags: [
+    'E-commerce',
+    'Web development',
+    'Shopify',
+  ],
+  stats: [
+    { value: '2025', label: 'Website launch' },
+  ],
+}
+
+export default (props) => <PortfolioLayout meta={meta} {...props} />
+
+<Image src={lifeisbananas} alt="" />
+
+Life is Bananas is een webshop die zich richt op de verkoop van gevriesdroogde kindervoeding en snacks. 100% natuurlijk, voedzaam, smakelijk en bovenal easy-peasy.

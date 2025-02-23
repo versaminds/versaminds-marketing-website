@@ -1,0 +1,28 @@
+import { PortfolioLayout } from '@/components/PortfolioLayout'
+import Image from 'next/image'
+import engicom from './engicom.png'
+import logo from './engicom-logo.png'
+
+export const meta = {
+  client: 'Engicom',
+  title: 'Engicom website',
+  logo: logo,
+  description: 'IT partner voor de KMO en particulieren, hardware, software en netwerken.',
+  summary: [
+    'Complete IT-oplossingen voor particulieren en bedrijven: Hardware, Software, Netwerkbeheer, Cyberbeveiliging en Projectmanagement. Hulp nodig op afstand? Geen probleem, wij helpen u graag verder.',
+  ],
+  date: '2025',
+  service: 'Web development, advies',
+  tags: [
+    'Web development',
+  ],
+  stats: [
+    { value: '2025', label: 'Website launch' },
+  ],
+}
+
+export default (props) => <PortfolioLayout meta={meta} {...props} />
+
+<Image src={engicom} alt="" />
+
+Voor Engicom hebben we een volledige website verzorgd, aangepast naar de wensen van de klant. De website is volledig responsive en bevat een CMS-systeem waarmee de klant zelf de website kan beheren.
