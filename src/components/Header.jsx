@@ -325,11 +325,6 @@ export function Header() {
                     )}
                   </Disclosure>
                 </div>
-                <Button href="/signup" color="main">
-                  <span>
-                    Get started <span className="hidden lg:inline">today</span>
-                  </span>
-                </Button>
               </div>
             </div>
           </Dialog.Panel>
